@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Attribute</title>
+</head>
+
+<body>
+
+    <!-- Page Title -->
+    <h1>Electric Bulb</h1>
+
+    <!-- ON Button: Changes the bulb image to 'on' -->
+    <button onclick="document.getElementById('img').src='/images/pic_bulbon.gif'">On</button>
+
+    <!-- Bulb Image: Default is 'off' -->
+    <img id="img" src="/images/pic_bulboff.gif" alt="Bulb Image" style="width:100px; height:auto;">
+
+    <!-- OFF Button: Changes the bulb image to 'off' -->
+    <button onclick="document.getElementById('img').src='/images/pic_bulboff.gif'">Off</button>
+
+    <br><br>
+
+    <!-- Paragraph with a message -->
+    <p id="demo1">Hollo, Mohammad Al-Amin Can You Do You Crack The Job?</p> <br><br>
+    
+    <!-- Button to change font size of the paragraph -->
+    <button onclick="document.getElementById('demo1').style.fontSize='35px'">Change the Style</button> <br><br>
+    
+    <!-- Button to hide the paragraph -->
+    <button onclick="document.getElementById('demo1').style.display='none'">Hide the Element</button> <br><br>
+    
+    <!-- Button to show the paragraph again -->
+    <button onclick="document.getElementById('demo1').style.display='block'">Show the Element</button> <br><br>
+
+</body>
+
+</html>
