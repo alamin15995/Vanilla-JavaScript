@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where to use JS file</title>
+
+  <!-- Script for demo2 (placed in head) -->
+  <script>
+    // Wait for the DOM content to fully load before accessing demo2
+    document.addEventListener("DOMContentLoaded", function() {
+      // Change color of demo2 to red
+      document.getElementById("demo2").style.color = "red";
+    });
+  </script>
+</head>
+<body>
+
+  <!-- demo1 section with an inline button to change the content -->
+  <h1 id="demo1">Hello JavaScript-1</h1>
+  <button onclick="document.getElementById('demo1').innerHTML='JavaScript learning Restart'">Click Me</button>
+
+  <!-- demo2 section, color will be changed to red by the script in head -->
+  <h1 id="demo2">Hello JavaScript-2</h1>
+
+  <!-- demo3 section, color will be changed to green by the script in the body -->
+  <h1 id="demo3">Hello JavaScript-3</h1>
+
+  <!-- demo4 section, external JS file will affect this -->
+  <h1 id="demo4">Hello JavaScript-4</h1>
+
+  <!-- Script for demo3 (placed before external script) -->
+  <script>
+      // Change the color of demo3 to green
+      document.getElementById("demo3").style.color = "green";
+  </script>
+
+  <!-- External script for demo4 (ensure the path is correct for your project structure) -->
+  <script src="/Introduction/script.js"></script>
+
+</body>
+</html>

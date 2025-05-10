@@ -1,0 +1,1 @@
+ document.getElementById("demo4").style.color="purple";
