@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output</title>
+</head>
+
+<body>
+
+    <!-- Element to demonstrate the use of innerHTML -->
+    <h1 id="demo1">Hello, <b>world!</b></h1>
+    <script>
+        // Select the element with id 'demo1'
+        let hed = document.getElementById('demo1');
+        // Log the current HTML content of the element to the console
+        console.log(hed.innerHTML);
+        // Replace the existing content with italicized text
+        hed.innerHTML = "<i>Goodbye, world!</i>";
+    </script>
+
+    <!-- Element to demonstrate the use of innerText -->
+    <h1 id="demo2">Hello, <b>world!</b></h1>
+    <script>
+        // Select the element with id 'demo2'
+        let hed2 = document.getElementById('demo2');
+        // Log the visible text content (ignoring HTML tags) to the console
+        console.log(hed2.innerText);
+        // Replace the content with plain text, HTML tags will be treated as text
+        hed2.innerText = "<i>Goodbye, world!</i>";
+    </script>
+
+    <!-- Script to demonstrate alert functionality -->
+    <script>
+        // Display an alert using 'window.alert' (explicit global scope)
+        window.alert("Congratulations");
+        // Display an alert using 'alert' (implicit global scope)
+        alert("Congratulations");
+    </script>
+
+    <!-- Buttons to demonstrate the print functionality -->
+     
+    <!-- Button that calls the print function using 'window.print()' -->
+    <button onclick="window.print()">Print</button>
+
+    <!-- Button that calls the print function using 'print()' (implicit global scope) -->
+    <button onclick="print()">Print</button>
+
+</body>
+
+</html>

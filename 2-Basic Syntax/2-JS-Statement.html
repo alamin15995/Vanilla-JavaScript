@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Statement</title>
+</head>
+
+<body>
+
+    <!-- Output elements -->
+    <h1 id="demo1"></h1>
+    <h1 id="demo2"></h1>
+    <h1 id="demo3"></h1>
+
+    <!-- Button to trigger JavaScript function -->
+    <button id="button" onclick="myFunction()">Click Me</button>
+
+    <script>
+        // Basic variable declarations and addition
+        let a = 10; // Declare variable a
+        let b = 10; // Declare variable b
+        let z = a + b; // Add a and b, store result in z
+
+        console.log("a= ", z); // Log the result to console
+
+        // Displaying text in HTML
+        document.getElementById("demo1").innerHTML = "Hello, Al-Amin"; // Display text in h1 with id="demo1"
+
+        // Declaring multiple variables in one line
+        let n1 = 10, n2 = 20, n3 = 30; // Declare and initialize three variables
+
+        // Calculate the sum and log it
+        let sum = n1 + n2 + n3; // Sum of n1, n2, n3
+        console.log("Summation:", sum); // Log the summation
+
+        // Working with a string variable
+        let name = "Al-Amin"; // Declare a string variable
+        console.log("name:", name); // Log the string
+
+        // Declaring multiple variables in one line (not recommended for clarity)
+        let num1 = 10;
+        let num2 = 200;
+        let num3 = 300; // Declare three number variables
+        console.log("Sum: ", num1 + num2 + num3); // Log their sum
+    </script>
+
+    <script>
+        // Function triggered on button click
+        function myFunction() {
+            // Change the content of elements with id demo2 and demo3
+            document.getElementById("demo2").innerHTML = "Hello JavaScript";
+            document.getElementById("demo3").innerHTML = "Hello Back-End Developer";
+        }
+    </script>
+
+</body>
+
+</html>
