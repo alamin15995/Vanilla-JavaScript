@@ -48,8 +48,8 @@ num8 = 12321.3213234; // Update values
 num9 = num7 + num8; // Update values
 console.log("Updated num9 use-let:", num9); // Output: updated sum
 
-// ❌ Re-declaration using let in the same scope is not allowed
-// let num7 = 1312.3232; // ❌ SyntaxError: Identifier 'num7' has already been declared
+//Re-declaration using let in the same scope is not allowed
+// let num7 = 1312.3232; //SyntaxError: Identifier 'num7' has already been declared
 // let num8 = 21342.434;
 // let num9 = num7 + num8;
 // console.log("Re-declared num9:", num9);
@@ -125,10 +125,59 @@ console.log("_100:", _100);
 2. It can be used at the beginning, middle, or end of an identifier.
 3. Common in libraries like jQuery, where $ is used as a shortcut.
 */
-let $ = "Hello World";      // $ as a variable
-let $$$ = 2;                // multiple $ are allowed
-let $myMoney = 5;           // $ in a variable name
+let $ = "Hello World"; // $ as a variable
+let $$$ = 2; // multiple $ are allowed
+let $myMoney = 5; // $ in a variable name
 
 console.log("$:", $);
 console.log("$$$:", $$$);
 console.log("$myMoney:", $myMoney);
+
+
+
+
+
+
+// var keyword -> global scope (use out of the block), can be re-declare, can be updated
+var x111 = 111;
+console.log("x111: ", x111);
+var x111 = 0; // re-declare allowed with var
+console.log("x111: ", x111);
+{
+  // a block scope
+  x111 = 200; // updates global var
+  console.log("x111 - block scope: ", x111);
+}
+console.log("x111 - after block: ", x111);
+x111 = 300; // can be updated
+console.log("x111 - final value: ", x111);
+
+// let keyword -> block scope (cannot re-declare in same scope), can be updated
+let x100 = 111;
+console.log("x100: ", x100);
+// let x100 = 0; // Syntax error: can't re-declare in same scope
+x100 = 222; //  can be updated
+console.log("x100: ", x100);
+{
+  // a block scope
+  let x101 = 200;
+  console.log("x101 - block scope: ", x101);
+}
+// console.log("x101 - outside block: ", x101); // Error: x101 is not defined outside
+// x101 = 300; // Error: x101 is not defined in outer scope
+
+// const keyword -> block scope, cannot be re-declared, cannot be updated
+const x200 = 111;
+console.log("x200: ", x200);
+
+// const x200 = 0; //Syntax error: Cannot re-declare
+// x200 = 222; //Syntax error: Cannot be update
+
+{
+  // a block scope
+  const x201 = 200;
+  console.log("x201 - block scope: ", x201);
+}
+
+// console.log("x201 - outside block: ", x201); //Error: x201 is not defined outside
+// x201 = 300; //Error: Cannot update a const variable
